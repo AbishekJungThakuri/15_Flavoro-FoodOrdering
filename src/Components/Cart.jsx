@@ -29,7 +29,7 @@ export const Cart = () => {
            </div>
            
          { cart && cart.length > 0 ? 
-          cart.map(item => <CartItem key={item.id} cartFood = {item} />)
+          cart.map(item => <CartItem key={item.id} cartFood = {item} id={item.id} qty = {item.qty} />)
           :  (
             <h2 className="text-center text-xl font-bold text-gray-800">
               Your cart is empty

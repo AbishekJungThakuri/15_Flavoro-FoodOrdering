@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { PropagateLoader } from "react-spinners";
+import { Navbar } from "../Components/Navbar";
 
 const Success = () => {
+
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
   }, []);
+
+
   return (
+    <>
+      <Navbar />
+    
     <div className="flex flex-col items-center justify-center h-screen">
       {loading ? (
                <PropagateLoader color="#36d7b7" />
@@ -21,6 +29,7 @@ const Success = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
    
